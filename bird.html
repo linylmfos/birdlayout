@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>双飞翼布局</title>
+		<style type="text/css">
+		body{margin:0; padding:0;}
+		.boxA{width:180px;background: #CD0000 }
+		.boxB{width:600px;background: #9ACD32}
+		.boxC{width:180px;background: #87CEFF}
+		.box{ height: 300px; float: left;}
+		/*ABC*/
+		/*.boxA{position: relative;left:-960px;}
+		.boxB{margin-left:180px;}*/
+		
+		/*CBA*/
+		.container{ padding: 0 180px;}
+		.boxB{width: 100%; text-align: right;}
+		.boxC{position: relative;margin-left: -180px;left:-100%;}
+		.boxA{position: relative;margin-left: -180px;right:-180px;}
+		/*BAC*/
+		/*.boxC{float:right;}
+		.container{width: 960px;}*/
+		</style>
+	</head>
+	<body>
+		<p>现有并列的三列布局结构，从左至右依次为 A, B, C, 宽度分别为180px, 600px, 180px。要求在不改变 Html 结构的情况下用CSS实现：ABC，CBA，BAC 三种布局及在CBA排列下使B宽度自适应（三列总宽度100%）.</p>
+		<div class="container">
+			<div class="box boxB">B</div>
+			<div class="box boxC">C</div>
+			<div class="box boxA">A</div>
+		</div>
+	</body>
+</html>
